@@ -23,3 +23,12 @@
 ### QOL Changes
 
 ## Add a database of string lengths from brands if you buy a full reel, mini reel, or half reel.
+
+
+### Next Steps
+
+## Start on the gui and interactions
+
+## Smoke test the tennis player with a main method or junit tester
+
+## Look into hooking the test restults into a github API or On a certain readme to easily see results;
