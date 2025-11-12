@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import TennisStringingKiosk.Racket_Object_Dependencies.Stringing_Kiosk_Enums.TennisRacketBrand;
 import TennisStringingKiosk.Racket_Object_Dependencies.Stringing_Kiosk_Enums.TennisStringBrand;
 
-public class Racket {
+public class TennisRacket {
     private TennisRacketBrand racketBrand;
     private int mainTension;
     private int crossTension;
@@ -17,7 +17,7 @@ public class Racket {
     private static final TennisString DEFAULT_STRING = new TennisString(TennisStringBrand.DEFAULT, "DEFAULT");
     private static final TennisRacketBrand DEFAULT_BRAND = TennisRacketBrand.DEFAULT;
 
-    public Racket(TennisRacketBrand racketBrand, TennisString mainString, TennisString crossString, int mainTension, int crossTension) {
+    public TennisRacket(TennisRacketBrand racketBrand, TennisString mainString, TennisString crossString, int mainTension, int crossTension) {
         this.racketBrand = racketBrand;
         this.mainString = mainString;
         this.crossString = crossString;
@@ -25,15 +25,15 @@ public class Racket {
         this.crossTension = crossTension;
     }
 
-    public Racket(TennisString mainString, TennisString crossString, int mainTension, int crossTension) {
+    public TennisRacket(TennisString mainString, TennisString crossString, int mainTension, int crossTension) {
         this(DEFAULT_BRAND, mainString, crossString, mainTension, crossTension);
     }
 
-    public Racket(int tension, TennisString string) {
+    public TennisRacket(int tension, TennisString string) {
         this(string, string, tension, tension);
     }
 
-    public Racket() {
+    public TennisRacket() {
         this(DEFAULT_BRAND, DEFAULT_STRING, DEFAULT_STRING, DEFAULT_TENSION, DEFAULT_TENSION);
     }
 
