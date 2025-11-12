@@ -19,3 +19,7 @@
 ## Goal 8: Figure out how to use SQLight data base to store the information that our program is going to use.
 
 
+
+### QOL Changes
+
+## Add a database of string lengths from brands if you buy a full reel, mini reel, or half reel.
