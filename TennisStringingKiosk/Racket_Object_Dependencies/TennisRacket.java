@@ -105,34 +105,89 @@ public class TennisRacket {
         return racketBrand;
     }
 
+    /**
+     * A getter that returns the toString of the racket brand this racket holds
+     * 
+     * @return A string representing the brand of racket this object is
+     */
     public String racketBrandToString() {
         return racketBrand.toString();
     }
 
+    /**
+     * A getter that returns the main strings TennisString object of this racket
+     * 
+     * @return Returns a TennisString object
+     */
     public TennisString getMainString() {
         return mainString;
     }
 
+
+    /**
+     * A getter that returns the cross strings TennisString object of this racket
+     * 
+     * @return Returns a TennisString object
+     */
     public TennisString getCrossString() {
         return crossString;
     }
 
+    /**
+     * Returns a Strings representing the main and cross strings of this racket.
+     * 
+     * Format:
+     *     Main String:    "main strings"
+     *     Cross String:    "cross strings"
+     * 
+     * @return Returns a String 
+     */
     public String tennisStringsToString() {
         return ("Main String:    " + mainString.toString() + "\n\nCross String:    " + crossString.toString());
     }
 
-     public int getMainTension() {
+    /**
+     * Returns an int representing the main strings tension of this racket
+     * 
+     * @return An int 
+     */
+    public int getMainTension() {
         return mainTension;
     }
 
+    /**
+     * Returns an int representing the cross strings tension of this racket
+     * 
+     * @return An int
+     */
     public int getCrossTension() {
         return crossTension;
     }
 
+    /**
+     * Returns a String representing the both the main and cross string tensions 
+     * of this racket
+     * 
+     * Format:
+     *     Main Tension:    "int tension"
+     *     Cross Tension:    "int tension" 
+     * 
+     * @return A string represting the tension of this rackets strings
+     */
     public String tensionsToString() {
         return ("Main Tension:    " + mainTension + "\nCross Tension:    " + crossTension);
     }
 
+    /**
+     * Returns a String representing the main strings tension and brand as well
+     * as the cross strings tension and brand
+     * 
+     * Format:
+     *     Main String:    "main string String"    Tension:    "int tension"
+     *     Cross String:    "cross string String"    Tension:    "int tension"
+     * 
+     * @return A well formated string representing this rackets strings tension and brands
+     */
     public String stringsToString() {
         StringBuilder retString = new StringBuilder();
         retString.append("Main String:    " + mainString.toString());
@@ -143,52 +198,131 @@ public class TennisRacket {
         return retString.toString();
     }
 
+    /**
+     * Returns the LocalDate object that represents the last time this 
+     * racket was strung
+     * 
+     * @return A LocalDate object
+     */
     public LocalDate getLastStrung() {
         return lastStrung;
     }
 
+    /**
+     * Returns a String representation of the LocalDate object this 
+     * racket holds representing the last date the racket was strung.
+     * 
+     * @return A String representation of a LocalDate object
+     */
     public String lastStrungToString() {
         return lastStrung.toString();
     }
 
+    /**
+     * A setter that allows you to update the TennisRacketBrand object
+     * field named racketBrand that this racket holds
+     * 
+     * @param racketBrand A TennisRacketBrand object
+     */
     public void setRacketBrand(TennisRacketBrand racketBrand){
         this.racketBrand = racketBrand;
     }
 
+    /**
+     * A setter that allows you to update the TennisString object
+     * field named mainString that this racket holds
+     * 
+     * @param mainString A TennisString object you want to update the main strings with
+     */
     public void setMainString(TennisString mainString) {
         this.mainString = mainString;
     }
 
+    /**
+     * A setter that allows you to update the TennisString object
+     * field named crossString that this racket holds
+     * 
+     * @param crossString A TennisString object you want to update the cross strings with
+     */
     public void setCrossString(TennisString crossString) {
         this.crossString = crossString;
     }
 
+    /**
+     * A setter that allows you to update the TennisString object
+     * assigned to both mainString and crossString fields this
+     * racket holds with the same TennisString object
+     * 
+     * @param strings A TennisString object you want to update this rackets strings with
+     */
     public void setRacketStrings(TennisString strings) {
         setMainString(strings);
         setCrossString(strings);
     }
 
+    /**
+     * A setter that allows you to update the int field mainTension
+     * that this racket holds
+     * 
+     * @param mainTension An int that you want to set mainTension to
+     */
     public void setMainTension(int mainTension) {
         this.mainTension = mainTension;
     }
 
+    /**
+     * A setter that allows you to update the int field crossTension
+     * that this racket holds
+     * 
+     * @param crossTension An int that you want to set crossTension to
+     */
     public void setCrossTension(int crossTension) {
         this.crossTension = crossTension;
     }
 
+    /**
+     * A setter that allows you to update the int fields mainTension
+     * and crossTension at the same time with the same int value
+     * 
+     * @param tensions An int that you want to update this rackets tension fields to
+     */
     public void setRacketTension(int tensions) {
         setMainTension(tensions);
         setCrossTension(tensions);
     }
 
+    /**
+     * A setter that allows you to update the LocalDate object
+     * this racket holds representing the last date this racket
+     * was strung
+     * 
+     * @param date The LocalDate object you wish to update this racket with
+     */
     public void setLastStrungDate(LocalDate date) {
         lastStrung = date;
     }
 
+    /**
+     * A setter that will set the lastStrung field of this racket to the 
+     * current date
+     */
     public void setLastStrung() {
         lastStrung = LocalDate.now();
     }
 
+    /**
+     * Returns a String represnting this racket object
+     * 
+     * Format:
+     *     Racket Brand:    "racket brand"
+     * 
+     *     Main String:    "main string String"    Tension:    "int tension"
+     *     Cross String:    "cross string String"    Tension:    "int tension"
+     * 
+     *     Last Strung:    "last strung date"
+     * 
+     * @return A string representing this racket object 
+     */
     @Override
     public String toString() {
         StringBuilder retString = new StringBuilder();
