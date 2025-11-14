@@ -1,4 +1,4 @@
-package TennisStringingKiosk;
+package TennisStringingKiosk.Kiosk_User_Objects;
 
 import java.util.LinkedList;
 
@@ -77,6 +77,43 @@ public class TennisStringer {
 
         return retList;
     }
+
+    /**
+     * This method returns how many total rackets to string 
+     * a particular stringer has by checking how many 
+     * rackets to string each player they are assigned has
+     * in their rackets to string list.
+     * 
+     * @return An int representing the total number of rackets needing strung
+     */
+    public int getRacketsToString() {
+        int retVal = 0;
+
+        for(TennisPlayer tp: players) {
+            retVal += tp.getNumberOfRacketsToString();
+        }
+
+        return retVal;
+    }
+
+    /**
+     * This method returns how many total rackets to return 
+     * a particular stringer has by checking how many rackets
+     * to pick up each plyer the stringer is assigned to has 
+     * in their rackets to pick up list.
+     * 
+     * @return An int representing the total number of rackets needing picked up
+     */
+    public int getRacketsToPickUp() {
+        int retVal = 0;
+
+        for (TennisPlayer tp: players) {
+            retVal += tp.getNumberOfRacketsToPickUp();
+        }
+
+        return retVal;
+    }
+
 
     /**
      * This setter allows for the setting of the strungRackets 

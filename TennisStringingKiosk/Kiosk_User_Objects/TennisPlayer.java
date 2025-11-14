@@ -1,4 +1,4 @@
-package TennisStringingKiosk;
+package TennisStringingKiosk.Kiosk_User_Objects;
 
 import TennisStringingKiosk.Racket_Object_Dependencies.TennisRacket;
 import java.util.LinkedList;
@@ -226,6 +226,18 @@ public class TennisPlayer {
     }
 
     /**
+     * This getter allows the size of the rackets to string
+     * list to be returned without calling .size() after
+     * calling getRacketsToString() which first copies the 
+     * linked list.
+     * 
+     * @return An int field representing how many rackets need to be strung
+     */
+    public int getNumberOfRacketsToString() {
+        return racketsToString.size();
+    }
+
+    /**
      * A getter that returns a copy of the list of rackets
      * this tennis player needs to pick up / have been strung.
      * 
@@ -256,6 +268,18 @@ public class TennisPlayer {
         }
 
         return retString.toString();
+    }
+
+    /**
+     * This getter allows the size of the rackets to pick up
+     * list to be returned without calling .size() after
+     * calling getRacketsToPickUp() which first copies the 
+     * linked list.
+     * 
+     * @return An int field representing how many rackets need to be picked up
+     */
+    public int getNumberOfRacketsToPickUp() {
+        return racketsToPickUp.size();
     }
 
     /**
