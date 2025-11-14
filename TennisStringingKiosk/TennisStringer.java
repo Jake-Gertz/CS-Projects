@@ -1,0 +1,124 @@
+package TennisStringingKiosk;
+
+import java.util.LinkedList;
+
+/**
+ * The TennisStringer class is used to represent 
+ * a tennis stringer who will be assigned to a
+ * tennis players for which they are responsible for.
+ * 
+ * @author Jake Gertz
+ * @date 11/14/2025
+ * @version 1.0
+ */
+public class TennisStringer {
+    private int strungRackets;
+    private LinkedList<TennisPlayer> players;
+
+    /**
+     * Constants in this class
+     *     
+     *     STRUNG_RACKETS_DEFAULT
+     *      
+     *      Strung rackets default is a final int that 
+     *          represents the default value that will 
+     *          be assigned to a new TennisStringer objects
+     *          strungRackets value when initalized.
+     */
+    private static final int STRUNG_RACKETS_DEFAULT = 0;
+
+    /**
+     * This constructor allows for the creation of a tennis stringer with
+     * required integer peramerter strungRackets. This will set this
+     * TennisStringer's strungRackets field to the input perameter as 
+     * long as it is greater than 0, else strungRackets will be set to 0
+     * and it will also initalize the linked list of players with a new
+     * empty linked list.
+     * 
+     * @param strungRackets
+     */
+    public TennisStringer(int strungRackets) {
+        this.strungRackets = (strungRackets > 0 ? strungRackets : 0);
+        players = new LinkedList<TennisPlayer>();
+    }
+    /**
+     * This constructor allows for the creation of a tennis stringer with 
+     * no requireed perameters. Will set strung rackets to STRUNG_RACKETS_DEFAULT 
+     * and will initialize the players linked list as a new empyty list.
+     */
+    public TennisStringer() {
+        this(STRUNG_RACKETS_DEFAULT);
+    }
+
+    /**
+     * This getter returns the int field this TennisStringer
+     * object holds which represents how many rackets they 
+     * have strung.
+     * 
+     * @return An int representing strung rackets
+     */
+    public int getStrungRackets() {
+        return strungRackets;
+    }
+
+    /**
+     * Returns a copy of the players list which represents 
+     * all of the TennisPlayer objects this stringer is
+     * responsible! 
+     * 
+     * @return A shallow copy of LinkedList<TennisPlayer> players 
+     */
+    public LinkedList<TennisPlayer> getPlayers() {
+        LinkedList<TennisPlayer> retList = new LinkedList<TennisPlayer>();
+
+        for(TennisPlayer tp: players) {
+            retList.addLast(tp);
+        }
+
+        return retList;
+    }
+
+    /**
+     * This setter allows for the setting of the strungRackets 
+     * artribute of this TennisStringer object. If the input 
+     * perameter is greater than 0 strungRackets will be set to 
+     * the input perameter else it will be set to 0.
+     * 
+     * @param strungRackets an int  representing the number of strung rackets
+     */
+    public void setStrungRackets(int strungRackets) {
+        this.strungRackets = (strungRackets > 0 ? strungRackets : 0);
+    }
+
+    /**
+     * This setter allows for an entire LinkedList<TennisPlayer> 
+     * to be passed in and this TennisStringer objects players list
+     * will be updated to the passed in LinkedList<TennisPlayer>.
+     * 
+     * @param players A LinkedList<TennisPlayer> to update this players list to
+     */
+    public void setPlayersList(LinkedList<TennisPlayer> players) {
+        this.players = players;
+    }
+
+    /**
+     * This method allows a tennisPlayer to be added
+     * to the players linked list of this TennisStringer.
+     * 
+     * @param player A TennisPlayer object to add to this stringers list of players
+     */
+    public void addPlayer(TennisPlayer player) {
+        players.addLast(player);
+    }
+
+    /**
+     * This method allows for the removal of a TennisPlayer
+     * object from this TennisStringers list of players.
+     * 
+     * @param player The TennisPlayer object to remove from the list.
+     * @return A boolean, True if the removal was successful, false otherwise.
+     */
+    public boolean removePlayer(TennisPlayer player) {
+        return players.remove(player);
+    }
+}
