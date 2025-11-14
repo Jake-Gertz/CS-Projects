@@ -31,7 +31,7 @@ public class TennisRacket {
     private LocalDate lastStrung;
 
     /**
-        Finals included in class:
+        Constants included in class:
 
             DEFAULT_TENSION, DEFAULT_STRING, DEFAULT_BRAND
 
